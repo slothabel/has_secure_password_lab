@@ -12,7 +12,6 @@ class UsersController < ApplicationController
         else
             session[:user_id] = @user.id
         end
-        # byebug
     end
 
     private
@@ -20,7 +19,3 @@ class UsersController < ApplicationController
         params.require(:user).permit(:name, :password, :password_confirmation)
     end
 end
-# users POST /users(.:format)     users#create
-# new_user GET  /users/new(.:format) users#new
-#    login GET  /login(.:format)     sessions#new
-#          POST /login(.:format)     sessions#create
